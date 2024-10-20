@@ -1,0 +1,7 @@
+platform :ios, '16.0'
+
+target 'miniproject_article' do
+  use_frameworks!
+
+  pod 'SwiftLint'
+end

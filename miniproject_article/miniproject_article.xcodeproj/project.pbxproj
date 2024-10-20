@@ -14,6 +14,7 @@
 		04DE2C3F2CC4E7630097205B /* miniproject_articleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2C3E2CC4E7630097205B /* miniproject_articleTests.swift */; };
 		04DE2C492CC4E7630097205B /* miniproject_articleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2C482CC4E7630097205B /* miniproject_articleUITests.swift */; };
 		04DE2C4B2CC4E7630097205B /* miniproject_articleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2C4A2CC4E7630097205B /* miniproject_articleUITestsLaunchTests.swift */; };
+		AAF1D49BCB5A621DBC39C74A /* Pods_miniproject_article.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56276D6F781F964D34D56111 /* Pods_miniproject_article.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,9 @@
 		04DE2C442CC4E7630097205B /* miniproject_articleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miniproject_articleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DE2C482CC4E7630097205B /* miniproject_articleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniproject_articleUITests.swift; sourceTree = "<group>"; };
 		04DE2C4A2CC4E7630097205B /* miniproject_articleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniproject_articleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4167974BBEFDFBC84CB56FF1 /* Pods-miniproject_article.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miniproject_article.debug.xcconfig"; path = "Target Support Files/Pods-miniproject_article/Pods-miniproject_article.debug.xcconfig"; sourceTree = "<group>"; };
+		54A8B8957A87146866497C9A /* Pods-miniproject_article.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miniproject_article.release.xcconfig"; path = "Target Support Files/Pods-miniproject_article/Pods-miniproject_article.release.xcconfig"; sourceTree = "<group>"; };
+		56276D6F781F964D34D56111 /* Pods_miniproject_article.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miniproject_article.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF1D49BCB5A621DBC39C74A /* Pods_miniproject_article.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,8 @@
 				04DE2C3D2CC4E7630097205B /* miniproject_articleTests */,
 				04DE2C472CC4E7630097205B /* miniproject_articleUITests */,
 				04DE2C2A2CC4E7610097205B /* Products */,
+				F1F4A3133BA771314D78FCA8 /* Pods */,
+				4802F7AE48C495AF4741DF76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +136,24 @@
 			path = miniproject_articleUITests;
 			sourceTree = "<group>";
 		};
+		4802F7AE48C495AF4741DF76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56276D6F781F964D34D56111 /* Pods_miniproject_article.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1F4A3133BA771314D78FCA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4167974BBEFDFBC84CB56FF1 /* Pods-miniproject_article.debug.xcconfig */,
+				54A8B8957A87146866497C9A /* Pods-miniproject_article.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04DE2C4E2CC4E7630097205B /* Build configuration list for PBXNativeTarget "miniproject_article" */;
 			buildPhases = (
+				5B33A094ECEEFD19665B7845 /* [CP] Check Pods Manifest.lock */,
 				04DE2C252CC4E7610097205B /* Sources */,
 				04DE2C262CC4E7610097205B /* Frameworks */,
 				04DE2C272CC4E7610097205B /* Resources */,
@@ -253,6 +279,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B33A094ECEEFD19665B7845 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-miniproject_article-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04DE2C252CC4E7610097205B /* Sources */ = {
@@ -413,6 +464,7 @@
 		};
 		04DE2C4F2CC4E7630097205B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4167974BBEFDFBC84CB56FF1 /* Pods-miniproject_article.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,9 +484,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -451,6 +502,7 @@
 		};
 		04DE2C502CC4E7630097205B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54A8B8957A87146866497C9A /* Pods-miniproject_article.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,9 +522,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
